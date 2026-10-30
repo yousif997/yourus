@@ -5,8 +5,9 @@ service cloud.firestore {
     // The ONLY account allowed to change the website (lower-case email).
     function isAdmin() {
       return request.auth != null
-        && request.auth.token.firebase.sign_in_provider == 'password'
-        && request.auth.token.email.lower() in ['youssufzahdi97@icloud.com', 'yousufzahdi97@gmail.com'];
+        && request.auth.token.firebase.sign_in_provider == 'google.com'
+        && request.auth.token.email_verified == true
+        && request.auth.token.email.lower() in ['yousufzahdi97@gmail.com'];
     }
 
     // A doctor entry may only contain these fields, with sane types and sizes.

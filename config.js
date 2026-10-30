@@ -12,5 +12,5 @@ window.NAWROZ_CONFIG = {
     appId: "1:874651331818:web:66dbf5cb760e2345a4bb93"
   },
   // Email address(es) allowed to open the control panel:
-  adminEmails: ["youssufzahdi97@icloud.com", "yousufzahdi97@gmail.com"]
+  adminEmails: ["yousufzahdi97@gmail.com"]
 };

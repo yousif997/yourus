@@ -65,9 +65,9 @@
   }};
 
   /* ---------- staff sign-in (open with  yoursite.com/#admin  or the footer link) ---------- */
-  var L={ar:{t:'دخول الإدارة',e:'الإيميل',p:'كلمة السر',go:'دخول',out:'تسجيل خروج',as:'داخل باسم',no:'لوحة التحكم بعد ما تفعّلت. شوف دليل الإعداد (Firebase).',bad:'الإيميل أو كلمة السر غلط.',na:'هذا الحساب ما عنده صلاحية إدارة.',x:'سكّر'},
-    ku:{t:'چوونا ژوور یا ڕێڤەبەریێ',e:'ئیمەیل',p:'پەیڤا نهێنی',go:'چوونە ژوور',out:'دەرکەفتن',as:'چوویە ژوور وەک',no:'پانێل هێشتا چالاک نەبوویە. ڕێبەرا دامەزراندنێ ببینە (Firebase).',bad:'ئیمەیل یان پەیڤا نهێنی خەلەتە.',na:'ئەڤ هەژمارە دەستهەلاتا ڕێڤەبەریێ نینە.',x:'گرتن'},
-    en:{t:'Staff sign-in',e:'Email',p:'Password',go:'Sign in',out:'Sign out',as:'Signed in as',no:'The control panel is not set up yet. See the setup guide (Firebase).',bad:'Wrong email or password.',na:'This account has no admin access.',x:'Close'}};
+  var L={ar:{g:'الدخول بحساب Google',t:'دخول الإدارة',e:'الإيميل',p:'كلمة السر',go:'دخول',out:'تسجيل خروج',as:'داخل باسم',no:'لوحة التحكم بعد ما تفعّلت. شوف دليل الإعداد (Firebase).',bad:'الإيميل أو كلمة السر غلط.',na:'هذا الحساب ما عنده صلاحية إدارة.',x:'سكّر'},
+    ku:{g:'چوونە ژوور ب Google',t:'چوونا ژوور یا ڕێڤەبەریێ',e:'ئیمەیل',p:'پەیڤا نهێنی',go:'چوونە ژوور',out:'دەرکەفتن',as:'چوویە ژوور وەک',no:'پانێل هێشتا چالاک نەبوویە. ڕێبەرا دامەزراندنێ ببینە (Firebase).',bad:'ئیمەیل یان پەیڤا نهێنی خەلەتە.',na:'ئەڤ هەژمارە دەستهەلاتا ڕێڤەبەریێ نینە.',x:'گرتن'},
+    en:{g:'Sign in with Google',t:'Staff sign-in',e:'Email',p:'Password',go:'Sign in',out:'Sign out',as:'Signed in as',no:'The control panel is not set up yet. See the setup guide (Firebase).',bad:'Wrong email or password.',na:'This account has no admin access.',x:'Close'}};
   function lt(){var l=document.documentElement.lang;return L[l]||L.ar}
   function esc(s){return String(s||'').replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
   async function openLogin(){
@@ -77,13 +77,13 @@
     var f=await fb(),body;
     if(!fbOn||!f){body='<p class="sxm">'+esc(t.no)+'</p>'}
     else if(f.user){body='<p class="sxm">'+esc(t.as)+' <b>'+esc(f.user.email)+'</b></p>'+(isAdmin(f)?'':'<p class="sxe">'+esc(t.na)+'</p>')+'<button type="button" class="sxb" id="sxOut">'+esc(t.out)+'</button>'}
-    else{body='<form id="sxForm"><label>'+esc(t.e)+'<input id="sxE" type="email" autocomplete="username" required dir="ltr"></label><label>'+esc(t.p)+'<input id="sxP" type="password" autocomplete="current-password" required dir="ltr"></label><p class="sxe" id="sxErr" hidden></p><button class="sxb" type="submit">'+esc(t.go)+'</button></form>'}
+    else{body='<div class="sxg"><button type="button" class="sxb sxgb" id="sxGoogle"><svg viewBox="0 0 48 48" width="20" height="20" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>'+esc(t.g)+'</button><p class="sxe" id="sxErr" hidden></p></div>'}
     d.innerHTML='<div class="sxh"><b>'+esc(t.t)+'</b><button type="button" class="sxx" aria-label="'+esc(t.x)+'">×</button></div>'+body;
     d.querySelector('.sxx').onclick=function(){d.close()};
     var o=d.querySelector('#sxOut');if(o)o.onclick=async function(){await f.auth.signOut();location.hash='';location.reload()};
-    var fm=d.querySelector('#sxForm');if(fm)fm.onsubmit=async function(e){e.preventDefault();var er=d.querySelector('#sxErr');
-      try{await f.auth.signInWithEmailAndPassword(d.querySelector('#sxE').value.trim(),d.querySelector('#sxP').value);history.replaceState(null,'',location.pathname);location.reload()}
-      catch(x){er.hidden=false;er.textContent=t.bad}};
+    var gb=d.querySelector('#sxGoogle');if(gb)gb.onclick=async function(){var er=d.querySelector('#sxErr');
+      try{var pr=new firebase.auth.GoogleAuthProvider();pr.setCustomParameters({prompt:'select_account'});await f.auth.signInWithPopup(pr);history.replaceState(null,'',location.pathname);location.reload()}
+      catch(x){if(x&&x.code==='auth/popup-closed-by-user')return;er.hidden=false;er.textContent=(x&&x.code==='auth/admin-restricted-operation')?t.na:t.bad}};
     try{d.showModal()}catch(e){d.setAttribute('open','')}
   }
   window.nawrozLogin=openLogin;
