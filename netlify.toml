@@ -2,6 +2,11 @@
   publish = "."
   functions = "netlify/functions"
 
+# Firebase web config keys are public by design (security comes from Firestore rules),
+# so the secrets scanner must not block the deploy because of config.js.
+[build.environment]
+  SECRETS_SCAN_OMIT_PATHS = "config.js"
+
 # ---------- Security headers (all pages) ----------
 [[headers]]
   for = "/*"
