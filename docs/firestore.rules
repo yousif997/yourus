@@ -1,0 +1,35 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // The ONLY account allowed to change the website (lower-case email).
+    function isAdmin() {
+      return request.auth != null
+        && request.auth.token.firebase.sign_in_provider == 'password'
+        && request.auth.token.email.lower() in ['youssufzahdi97@icloud.com', 'yousufzahdi97@gmail.com'];
+    }
+
+    // A doctor entry may only contain these fields, with sane types and sizes.
+    function validDoctor(d) {
+      return d.keys().hasOnly(['order','c','ph','cr','n','r','f','photo','cut','hidden'])
+        && d.order is number
+        && d.c is string && d.c.size() < 20
+        && d.ph is list && d.ph.size() <= 4
+        && d.cr is list && d.cr.size() <= 6
+        && d.n is map && d.r is map && d.f is map
+        && d.photo is string && d.photo.size() < 1000000
+        && d.cut is bool && d.hidden is bool;
+    }
+
+    match /doctors/{id} {
+      allow read: if true;
+      allow create, update: if isAdmin() && id.size() < 40 && validDoctor(request.resource.data);
+      allow delete: if isAdmin();
+    }
+
+    // Everything else is closed.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
