@@ -737,9 +737,9 @@ const _apply5=apply;apply=function(l){_apply5(l);aiHeader();if(!aiTurns.length&&
 
 /* ===== Premium layer: copy, header state, reveal ===== */
 Object.assign(T.ar,{staff:'دخول الإدارة'});Object.assign(T.ku,{staff:'ژوورا ڕێڤەبەریێ'});Object.assign(T.en,{staff:'Staff sign-in'});
-Object.assign(T.ar,{erK:'طوارئ ٢٤ ساعة',erT:'حالة طارئة؟ إحنا وياك بكل لحظة',erP:'فريق الطوارئ والأطباء المختصين جاهزين ليل ونهار. خابرنا أو تعال للمستشفى مباشرة.',fLinks:'روابط سريعة',fRights:'كل الحقوق محفوظة'});
-Object.assign(T.ku,{erK:'فریاکەفتن ٢٤ دەمژمێر',erT:'بارێ لەزگین؟ ئەم هەر دەم دگەل تە دانە',erP:'تیما فریاکەفتنێ و نۆژدارێن پسپۆر شەڤ و ڕۆژ ئامادەنە. پەیوەندیێ ب مە بکە یان ڕاستەوخۆ وەرە نەخۆشخانێ.',fLinks:'لینکێن خێرا',fRights:'هەمی ماف پاراستینە'});
-Object.assign(T.en,{erK:'24-hour emergency',erT:'An emergency? We’re with you every minute',erP:'Our emergency team and specialists are ready day and night. Call us or come straight to the hospital.',fLinks:'Quick links',fRights:'All rights reserved'});
+Object.assign(T.ar,{erK:'طوارئ ٢٤ ساعة',erT:'حالة طارئة؟ إحنا وياك بكل لحظة',erP:'فريق الطوارئ والأطباء المختصين جاهزين ليل ونهار. خابرنا أو تعال للمستشفى مباشرة.',fLinks:'روابط سريعة',fRights:'كل الحقوق محفوظة',fBy:'تصميم وتطوير'});
+Object.assign(T.ku,{erK:'فریاکەفتن ٢٤ دەمژمێر',erT:'بارێ لەزگین؟ ئەم هەر دەم دگەل تە دانە',erP:'تیما فریاکەفتنێ و نۆژدارێن پسپۆر شەڤ و ڕۆژ ئامادەنە. پەیوەندیێ ب مە بکە یان ڕاستەوخۆ وەرە نەخۆشخانێ.',fLinks:'لینکێن خێرا',fRights:'هەمی ماف پاراستینە',fBy:'دیزاین و گەشەپێدان'});
+Object.assign(T.en,{erK:'24-hour emergency',erT:'An emergency? We’re with you every minute',erP:'Our emergency team and specialists are ready day and night. Call us or come straight to the hospital.',fLinks:'Quick links',fRights:'All rights reserved',fBy:'Designed & developed by'});
 (()=>{
   const bar=document.querySelector('.bar');
   const onS=()=>bar&&bar.classList.toggle('scrolled',scrollY>8);addEventListener('scroll',onS,{passive:true});onS();
