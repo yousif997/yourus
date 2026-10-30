@@ -15,7 +15,7 @@ const DICONS={
  nicu:'<rect x="3" y="10" width="18" height="9" rx="3"/><path d="M6 10V8a6 6 0 0 1 12 0v2"/><circle cx="12" cy="14.5" r="1.6"/>'
 };
 const DEPTS=['surgery','icu','cath','vip','birth','physio','scope','nicu'];
-const CATS=['all','women','heart','internal','rheum','neuro','surgery','uro','peds','derm','radio','lab'];
+const CATS=['all','women','heart','internal','rheum','neuro','surgery','uro','dental','peds','derm','radio','lab'];
 
 /* Doctors — Dr. Fatima first and featured */
 let D=[
@@ -82,7 +82,11 @@ let D=[
  {id:'mohammed',c:'uro',img:1,ph:['07507775046'],cr:['M.B.Ch.B.','K.B.M.S.'],
   n:{"ar": "د. محمد أحمد نعمت", "en": "Dr. Mohammed Ahmed Nemat"},
   r:{"ar": "أخصائي جراحة الكلى والمسالك البولية", "ku": "بسپور د بوارێ نشتەرگەریا گولچیسکا و جوبارێت دەست ئاڤێ", "en": "Urologist"},
-  f:{"ar": "جراحة الكلى والمسالك البولية والعقم وغدة البروستات · إزالة حصى الكلى والمجاري البولية · جراحة الأمراض الخلقية للجهاز التناسلي والأورام", "ku": "بسپور د بوارێ نشتەرگەریا گولچیسکا و جوبارێت دەست ئاڤێ و نەزوکی و ڕژێنا پروستاتا، راکرنا بەرکێن گولچیسکا و جوبارێت میزێ و نشتەرگەریێن نەخوشیێن زکماکی یێن کوئەندامێ زاوزێ، شێرپەنجا", "en": "Kidney and urinary tract surgery, male infertility and prostate · Removal of kidney and urinary tract stones · Surgery for congenital conditions of the genital organs and cancers"}}
+  f:{"ar": "جراحة الكلى والمسالك البولية والعقم وغدة البروستات · إزالة حصى الكلى والمجاري البولية · جراحة الأمراض الخلقية للجهاز التناسلي والأورام", "ku": "بسپور د بوارێ نشتەرگەریا گولچیسکا و جوبارێت دەست ئاڤێ و نەزوکی و ڕژێنا پروستاتا، راکرنا بەرکێن گولچیسکا و جوبارێت میزێ و نشتەرگەریێن نەخوشیێن زکماکی یێن کوئەندامێ زاوزێ، شێرپەنجا", "en": "Kidney and urinary tract surgery, male infertility and prostate · Removal of kidney and urinary tract stones · Surgery for congenital conditions of the genital organs and cancers"}},
+ {id:'meajer',c:'dental',img:1,ph:['07518818261'],cr:[],
+  n:{"ar":"د. ميجر يحيى شيخو","en":"Dr. Meajer Yehya Sheaxo"},
+  r:{"ar":"طبيب أسنان وأخصائي جراحة الفم والوجه والفكين","ku":"نۆژدارێ ددانان و پسپۆرێ نەشتەرگەریا دەڤ، ڕوو و ئەرزینکان","en":"Dentist and Oral & Maxillofacial Surgery Specialist"},
+  f:{"ar":"طب الأسنان وجراحة الفم والوجه والفكين","ku":"ددان و نەشتەرگەریا دەڤ، ڕوو و ئەرزینکان","en":"Dentistry and oral & maxillofacial surgery"}}
 ];
 
 const T={
@@ -94,7 +98,7 @@ const T={
   sOpen:'طوارئ وخدمة ما تتوقف',sDocs:'دكتور اختصاص وأستاذ',sDepts:'أقسام تخصصية',sVip:'غرف خاصة للمرضى',
   docKicker:'الكادر الطبي',docTitle:'أطباؤنا',docSub:'اختار الدكتور وخابر عيادته مباشرة حتى تحجز موعد.',feat:'الطبيبة المميّزة',search:'دوّر باسم الدكتور أو الاختصاص',empty:'ماكو دكتور بهالاسم.',
   clinic:'رقم العيادة',doctor:'الدكتور',secretary:'السكرتير',lab:'مختبر نوروز',profile:'كل المعلومات',close:'سدّ',
-  cats:{all:'الكل',women:'النسائية والتوليد',heart:'القلب',internal:'الباطنية والسكري',rheum:'المفاصل والروماتيزم',neuro:'الأعصاب',surgery:'الجراحة العامة',uro:'المسالك البولية',peds:'الأطفال',derm:'الجلدية والليزر',radio:'الأشعة والسونار',lab:'المختبر'},
+  cats:{all:'الكل',women:'النسائية والتوليد',heart:'القلب',internal:'الباطنية والسكري',rheum:'المفاصل والروماتيزم',neuro:'الأعصاب',surgery:'الجراحة العامة',uro:'المسالك البولية',dental:'الأسنان والفكين',peds:'الأطفال',derm:'الجلدية والليزر',radio:'الأشعة والسونار',lab:'المختبر'},
   deptKicker:'خدماتنا',deptTitle:'أقسام المستشفى',deptSub:'ثمان أقسام اختصاص جاهزة تستقبلكم ليل ونهار.',
   d:{surgery:['قسم العمليات','صالات عمليات مجهزة للعمليات العامة والاختصاص.'],icu:['قسم الإنعاش','عناية مركزة ومراقبة طول الوقت للحالات الصعبة.'],cath:['قسم القسطرة القلبية','تشخيص وعلاج أمراض القلب والشرايين.'],vip:['غرف VIP','غرف خاصة ومريحة للمريض والمرافق.'],birth:['قسم الولادة الطبيعية','متابعة الأم والولادة الطبيعية بمكان آمن.'],physio:['قسم العلاج الطبيعي','جلسات تأهيل حتى ترجع الحركة.'],scope:['ناظور القولون والمعدة','فحص بالناظور للمعدة والقولون.'],nicu:['الخدج وحديثي الولادة','رعاية خاصة للأطفال الخدج والمواليد الجدد.']},
   contactKicker:'تعالوا زورونا',cTitle:'المشاكل والشكاوي',cText:'صارت عندك مشكلة، أو عندك شكوى أو اقتراح؟ تواصل ويا إدارة المستشفى مباشرة على هالرقم، وكل ملاحظة تهمنا.',waMsg:'هلو، أريد أقدم شكوى / ملاحظة لمستشفى نوروز:',contactTitle:'تواصل ويانا',phoneL:'تلفون المستشفى',call:'خابر',copy:'انسخ',copied:'تم نسخ الرقم',addrL:'العنوان',addr:'دهوك – زاخو – مقابل مديرية ماء زاخو',map:'افتح بالخريطة',followL:'تابعونا',follow:'آخر الأخبار والعروض على صفحاتنا.',footAddr:'زاخو، مقابل مديرية ماء زاخو'},
@@ -106,7 +110,7 @@ const T={
   sOpen:'فریاکەفتن و خزمەتا بەردەوام',sDocs:'نۆژدار و پڕۆفیسۆرێن پسپۆر',sDepts:'پشکێن پسپۆر',sVip:'ژوورێن تایبەت',
   docKicker:'ستافێ پزیشکی',docTitle:'نۆژدارێن مە',docSub:'نۆژداری هەلبژێرە و ڕاستەوخۆ پەیوەندیێ ب کلینیکا وی بکە بۆ نوبەگرتنێ.',feat:'نۆژدارا دیار',search:'ب ناڤێ نۆژداری یان پسپۆریێ بگەڕە',empty:'چ نۆژدار نەهاتنە دیتن.',
   clinic:'ژمارا کلینیکێ',doctor:'نۆژدار',secretary:'سکرتێر',lab:'تاقیگەها نەورۆز',profile:'پڕۆفایلێ تەمام',close:'گرتن',
-  cats:{all:'هەمی',women:'ژنان و زاروکبوون',heart:'دل',internal:'ناڤخۆیی و شەکرە',rheum:'گەهـ و ڕۆماتیزم',neuro:'دەمار',surgery:'نەشتەرگەری',uro:'گورچیلک و جوبارێت میزێ',peds:'زاروک',derm:'پێست و لێزەر',radio:'تیشک و سۆنار',lab:'تاقیگەهـ'},
+  cats:{all:'هەمی',women:'ژنان و زاروکبوون',heart:'دل',internal:'ناڤخۆیی و شەکرە',rheum:'گەهـ و ڕۆماتیزم',neuro:'دەمار',surgery:'نەشتەرگەری',uro:'گورچیلک و جوبارێت میزێ',dental:'ددان و ئەرزینک',peds:'زاروک',derm:'پێست و لێزەر',radio:'تیشک و سۆنار',lab:'تاقیگەهـ'},
   deptKicker:'خزمەتگوزاری',deptTitle:'پشکێن نەخۆشخانێ',deptSub:'هەشت پشکێن پسپۆر یێن ئامادە شەڤ و ڕۆژ.',
   d:{surgery:['پشکا نەشتەرگەریێ','هۆلێن نەشتەرگەریێ یێن ئامادەکری.'],icu:['پشکا ئینعاشێ','چاڤدێریا چڕ بۆ نەخۆشێن ڕەوشا وان گران.'],cath:['پشکا قەستەرا دلی','دەستنیشانکرن و چارەسەریا نەخۆشیێن دلی.'],vip:['ژوورێن VIP','ژوورێن تایبەت بۆ نەخۆش و هەڤالێن وان.'],birth:['زایینا سروشتی','زایینا سروشتی د ژینگەهەکا پارێزراو دا.'],physio:['چارەسەریا سروشتی','دانیشتنێن ڤەگەڕاندنا لڤینێ.'],scope:['ناظورا گەدە و کۆلۆنێ','پشکنینا ناظوری بۆ گەدە و کۆلۆنێ.'],nicu:['زارۆکێن زوو بوویی و تازە بوویی','چاڤدێریا تایبەت بۆ زارۆکێن تازە.']},
   contactKicker:'سەرەدانا مە بکەن',cTitle:'کێشە و گازندە',cText:'کێشەیەک تە هەبوو یان گازندە یان پێشنیارەک؟ ڕاستەوخۆ ب ڕێڤەبەریا نەخۆشخانێ ڤە ل سەر ڤێ ژمارێ پەیوەندیێ بکە، ئەم گرنگیێ ب هەر تێبینیەکێ ددەین.',waMsg:'سلاڤ، دخوازم گازندەیەکێ / تێبینیەکێ پێشکێشی نەخۆشخانا نەورۆز بکەم:',contactTitle:'پەیوەندیێ ب مە بکەن',phoneL:'تەلەفۆنا نەخۆشخانێ',call:'پەیوەندی',copy:'کۆپی',copied:'ژمار هاتە کۆپیکرن',addrL:'ناڤ و نیشان',addr:'دهۆک – زاخۆ – بەرامبەر بنگەهێ ئاڤا زاخۆ',map:'ل سەر نەخشەی ڤەکە',followL:'مە فۆلۆ بکەن',follow:'نووترین هەواڵ ل سەر پەڕێن مە.',footAddr:'زاخۆ، بەرامبەر بنگەهێ ئاڤا زاخۆ'},
@@ -118,7 +122,7 @@ const T={
   sOpen:'emergency and care',sDocs:'specialists and professors',sDepts:'specialist departments',sVip:'private patient rooms',
   docKicker:'Medical staff',docTitle:'Our doctors',docSub:'Choose a doctor and call their clinic directly to book an appointment.',feat:'Featured physician',search:'Search by name or specialty',empty:'No matching doctor.',
   clinic:'Clinic',doctor:'Doctor',secretary:'Secretary',lab:'Newroz Lab',profile:'Full profile',close:'Close',
-  cats:{all:'All',women:'Women’s health',heart:'Cardiology',internal:'Internal medicine',rheum:'Rheumatology',neuro:'Neurology',surgery:'General surgery',uro:'Urology',peds:'Pediatrics',derm:'Dermatology',radio:'Radiology',lab:'Laboratory'},
+  cats:{all:'All',women:'Women’s health',heart:'Cardiology',internal:'Internal medicine',rheum:'Rheumatology',neuro:'Neurology',surgery:'General surgery',uro:'Urology',dental:'Dental & Maxillofacial',peds:'Pediatrics',derm:'Dermatology',radio:'Radiology',lab:'Laboratory'},
   deptKicker:'Services',deptTitle:'Hospital departments',deptSub:'Eight specialist departments, ready day and night.',
   d:{surgery:['Operating Theatres','Equipped theatres for general and specialist surgery.'],icu:['Intensive Care','Continuous monitoring for critical patients.'],cath:['Cardiac Catheterization','Diagnosis and treatment of heart and artery disease.'],vip:['VIP Rooms','Private rooms with comfortable service for patients and companions.'],birth:['Natural Delivery','Maternity care and natural birth in a safe setting.'],physio:['Physiotherapy','Rehabilitation sessions to restore movement.'],scope:['GI Endoscopy','Endoscopic examination of the stomach and colon.'],nicu:['Neonatal Care','Dedicated care for premature and newborn babies.']},
   contactKicker:'Visit us',cTitle:'Problems and complaints',cText:'Had a problem, or have a complaint or suggestion? Contact the hospital administration directly on this number. Every comment is followed up.',waMsg:'Hello, I would like to submit a complaint / feedback to Nawroz Hospital:',contactTitle:'Contact us',phoneL:'Hospital phone',call:'Call',copy:'Copy',copied:'Number copied',addrL:'Address',addr:'Duhok – Zakho – opposite the Zakho Water Directorate',map:'Open in Maps',followL:'Follow us',follow:'News and updates on our pages.',footAddr:'Zakho, opposite the Water Directorate'}
@@ -505,6 +509,9 @@ const KW={
  uro:['مسالك','كلى','كليه','كلية','حصى','حصوه','حصاة','بروستات','بروستاتا','مثانه','مثانة','ادرار','حرقة بول','عقم رجال','ضعف جنسي','خصيه',
   'گورچیلک','بەرکێن گورچیلکێ','بەرک','پرۆستات','پروستات','میز','میزدان','کیسکا میزێ','نەزۆکیا زەلامان',
   'kidney','stone','prostat','bladder','urin','urolog','male infertil','erectile','testic'],
+ dental:['اسنان','أسنان','سن','ضرس','اضراس','فك','الفك','لثه','لثة','تسوس','حشوه','قلع','ضرس العقل','زراعة اسنان','تقويم',
+  'ددان','دران','کەلبە','ئەرزینک','پوک','کرم ددان','ددانێ عەقلێ',
+  'tooth','teeth','dental','dentist','jaw','gum','wisdom','implant','cavity','maxillofacial','oral surgery'],
  rheum:['مفاصل','روماتيزم','ظهر','ركبه','ركبة','ديسك','فقرات','نقرس','كتف','عظام',
   'جومگە','جومگ','پشت','چوک','ڕوماتیزم','هەستی','ملی',
   'joint','arthrit','rheuma','back pain','knee','gout','shoulder','bone'],
@@ -567,7 +574,7 @@ function aiFindDocs(n){
 function aiLocal(text){
   const L=aiLangOf(text),R=AIR[L],n=aiNorm(text),out=[],tags=[];let sug=R.sug.gen;
   const named=aiFindDocs(n);
-  const cats=['women','heart','uro','peds','neuro','internal','rheum','surgery','derm','radio','lab'].filter(c=>aiHas(n,c));
+  const cats=['women','heart','uro','dental','peds','neuro','internal','rheum','surgery','derm','radio','lab'].filter(c=>aiHas(n,c));
   const er=aiHas(n,'er');
   if(er){out.push(R.er);tags.push('[[act:er]]');sug=R.sug.er}
   if(named.length){out.push(named.length>1?R.docs:R.doc);named.slice(0,3).forEach(id=>tags.push(`[[doc:${id}]]`));sug=R.sug.spec}
