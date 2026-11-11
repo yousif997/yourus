@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nawroz-hosptal.netlify.app/sitemap.xml
