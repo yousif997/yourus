@@ -19,51 +19,51 @@ const CATS=['all','women','heart','internal','rheum','neuro','surgery','uro','de
 
 /* Doctors — Dr. Fatima first and featured */
 let D=[
- {id:'fatima',c:'women',img:1,ph:['07503016370'],cr:['M.B.Ch.B.','C.A.B.O.G.','RCOG (UK)'],
+ {id:'fatima',c:'women',img:2,ph:['07503016370'],cr:['M.B.Ch.B.','C.A.B.O.G.','RCOG (UK)'],
   n:{ar:'د. فاطمة كمال خالد',en:'Dr. Fatima Kamal Khalid'},
   r:{ar:'أستاذ مساعد واستشارية النسائية والتوليد',ku:'پڕۆفیسۆرا هاریکار و نۆژدارا ڕاوێژکار یا ژنان و زاروکبوونێ',en:'Assistant Professor & Consultant in Obstetrics and Gynecology'},
   f:{ar:'اختصاص أمراض النسائية والتوليد والعقم · عضو مشارك في الكلية الملكية لأطباء النسائية والتوليد RCOG (المملكة المتحدة)',ku:'تایبەتمەندا نەخۆشیێن ژنان، زاروکبوون و نەزۆکیێ · ئەندامێ هاوبەش ل کۆلیژا شاهانە RCOG (بەریتانیا)',en:'Gynecology, obstetrics and infertility · Associate member of the Royal College of Obstetricians and Gynaecologists (UK)'}},
- {id:'suha',c:'women',img:1,ph:['07515105921'],cr:['M.B.Ch.B.','G.O.P'],
+ {id:'suha',c:'women',img:2,ph:['07515105921'],cr:['M.B.Ch.B.','G.O.P'],
   n:{ar:'د. سهى طلب جارالله',en:'Dr. Suha Talab Jarullah'},
   r:{ar:'أخصائية الأمراض النسائية والتوليد',ku:'پسپۆرا نەخۆشیێن ژنان و زاروکبوونێ',en:'Obstetrician and Gynecologist'},
   f:{ar:'الأمراض النسائية والتوليد ومعالجة العقم',ku:'نەخۆشیێن ژنان، زاروکبوون و چارەسەریا نەزۆکیێ',en:'Gynecology, obstetrics and infertility treatment'}},
- {id:'nechirwan',c:'heart',img:1,ph:['07510333224'],cr:['M.B.Ch.B.','F.K.B.M.S.'],
+ {id:'nechirwan',c:'heart',img:2,ph:['07510333224'],cr:['M.B.Ch.B.','F.K.B.M.S.'],
   n:{ar:'د. نيچيروان اسماعيل حسين',en:'Dr. Nechirwan Ismael Hussein'},
   r:{ar:'اختصاص دقيق في أمراض القلب والقسطرة التداخلية',ku:'تایبەتمەندیا هویر (بۆرد) ب نەخۆشیێن دل، قەستەرە و ئیکۆ',en:'Interventional Cardiologist'},
   f:{ar:'القسطرة القلبية التداخلية، فحص القلب بجهاز الإيكو والدوبلر الملون، تخطيط القلب أثناء الجهد',ku:'قەستەرا دلی، پشکنینا دلی ب ئیکۆ و دۆپلەرا ڕەنگین، تخطیطا دلی د دەمێ ماندیبوونێ دا',en:'Interventional catheterization, echocardiography and color Doppler, stress ECG'}},
- {id:'brisik',c:'internal',img:1,ph:['07508968596'],cr:['M.B.Ch.B.','F.K.B.M.S.','F.R.C.P. (Edinburgh)'],
+ {id:'brisik',c:'internal',img:2,ph:['07508968596'],cr:['M.B.Ch.B.','F.K.B.M.S.','F.R.C.P. (Edinburgh)'],
   n:{ar:'د. بريسك حيدر رشاد',en:'Dr. Brisik Haydar Rashad'},
   r:{ar:'أستاذ مساعد في الأمراض الباطنية',ku:'پڕۆفیسۆرێ هاریکار د نەخۆشیێن ناڤخۆیی دا',en:'Assistant Professor of Internal Medicine'},
   f:{ar:'القلب والأمراض الباطنية، الغدد الصماء وداء السكري · بورد (دكتوراه) · زميل الكلية الملكية البريطانية (أدنبرة)',ku:'دل و هناڤ، نەخۆشیێن غودە و ئێشێن شەکرێ · هەڤکارێ کۆلیژا شاهانە یا بەریتانی (ئەدنبرە)',en:'Cardiology and internal medicine, endocrinology and diabetes · Board doctorate · Fellow of the Royal College of Physicians of Edinburgh'}},
- {id:'azhin',c:'rheum',img:1,ph:['07500773327'],cr:['M.B.Ch.B.','FKHCMS (Rheumatology)'],
+ {id:'azhin',c:'rheum',img:2,ph:['07500773327'],cr:['M.B.Ch.B.','FKHCMS (Rheumatology)'],
   n:{ar:'د. أژين كمال خالد',en:'Dr. Azhin Kamal Khalid'},
   r:{ar:'دكتوراه (بورد) أمراض المفاصل والروماتيزم',ku:'دکتۆرا (بۆرد) تایبەتمەندا نەخۆشیێن گەهان و ڕۆماتیزمێ',en:'Board-certified Rheumatologist'},
   f:{ar:'أمراض المفاصل والروماتيزم، الفقرات والعلاج الطبيعي',ku:'نەخۆشیێن گەهان و ڕۆماتیزمێ، بڕبڕا پشتێ و چارەسەریا سروشتی',en:'Joint diseases and rheumatism, spine and physiotherapy'}},
- {id:'nasraldin',c:'neuro',img:1,ph:['07502187388'],cr:['EEG','NCV'],
+ {id:'nasraldin',c:'neuro',img:2,ph:['07502187388'],cr:['EEG','NCV'],
   n:{ar:'د. نصرالدين محمد خلف',en:'Dr. Nasraldin Muhammad Khalaf'},
   r:{ar:'الأخصائي في أمراض الجملة العصبية',ku:'تایبەتمەندێ کۆئەندامێ دەماران',en:'Neurologist'},
   f:{ar:'تخطيط الدماغ والأعصاب · شهادة مجازة من الرابطة العالمية للأمراض العصبية',ku:'تخطیطا مێشک و دەماران · بڕوانامە ژ کۆمەلەیا جیهانی یا نەخۆشیێن دەماران',en:'EEG and nerve conduction studies · Certified by the World Federation of Neurology'}},
- {id:'fawzi',c:'surgery',img:1,ph:['07503579098'],cr:['M.B.Ch.B.','F.K.B.M.S.'],
+ {id:'fawzi',c:'surgery',img:2,ph:['07503579098'],cr:['M.B.Ch.B.','F.K.B.M.S.'],
   n:{ar:'د. فوزي تحسين محمد',en:'Dr. Fawzi Tahsin Muhammad'},
   r:{ar:'دكتوراه (بورد) بالجراحة العامة',ku:'دکتۆرا (بۆرد) د نەشتەرگەریا گشتی دا',en:'Doctorate (Board) in General Surgery'},
   f:{ar:'جراحة الجهاز الهضمي والغدة الدرقية، عمليات الثدي ورفع الأورام، رفع المرارة بالناظور · زميل المجلس الكردستاني للاختصاصات الطبية',ku:'نەشتەرگەریا کۆئەندامێ هەرسێ و تیرۆئیدێ، مەمک و لابرنا گرێکان، لابرنا زراڤێ ب ناظوری · هەڤکارێ ئەنجومەنا کوردستانێ بۆ پسپۆریێن پزیشکی',en:'GI and thyroid surgery, breast surgery and tumor removal, laparoscopic gallbladder removal · Fellow of the Kurdistan Board for Medical Specialties'}},
- {id:'abdulkareem',c:'surgery',img:1,ph:['07504574120','07502218457'],cr:['M.B.Ch.B.','D.G.S.'],
+ {id:'abdulkareem',c:'surgery',img:2,ph:['07504574120','07502218457'],cr:['M.B.Ch.B.','D.G.S.'],
   n:{ar:'د. محمد عبدالكريم الپالاني',en:'Dr. Muhammad Abdulkareem'},
   r:{ar:'جراح اختصاصي · دبلوم عالي في الجراحة العامة',ku:'نەشتەرگەرێ پسپۆر · دیپلۆما بلند د نەشتەرگەریا گشتی دا',en:'Specialist Surgeon · Higher Diploma in General Surgery'},
   f:{ar:'الجراحة العامة، جراحة الجهاز الهضمي، أمراض الغدة الدرقية، أمراض الثدي، الأورام، جراحة الكلية والمجاري البولية',ku:'نەشتەرگەریا گشتی، کۆئەندامێ هەرسێ، تیرۆئید، مەمک، گرێ، نەشتەرگەریا گورچیلک و ڕێکێن میزێ',en:'General and digestive surgery, thyroid, breast, tumors, kidney and urinary tract surgery'}},
- {id:'ahmed',c:'peds',img:1,ph:['07510953936'],cr:['M.B.Ch.B.','IPS','KPS'],
+ {id:'ahmed',c:'peds',img:2,ph:['07510953936'],cr:['M.B.Ch.B.','IPS','KPS'],
   n:{ar:'د. أحمد محمد رشيد سليفاني',en:'Dr. Ahmed Mohammed Rasheed'},
   r:{ar:'أخصائي الأطفال وحديثي الولادة والخدج',ku:'تایبەتمەندێ نەخۆشیێن زاروکان و نوی بوویان',en:'Pediatrician · Newborn and premature care'},
   f:{ar:'عضو جمعية أطباء الأطفال العراقية (IPS) وعضو جمعية أطباء الأطفال الكردستانية (KPS)',ku:'ئەندامێ کۆمەلەیا نۆژدارێن زاروکان یا عیراقێ (IPS) و کوردستانێ (KPS)',en:'Member of the Iraqi Pediatric Society (IPS) and the Kurdistan Pediatric Society (KPS)'}},
- {id:'rauf',c:'derm',img:1,ph:['07503756503'],cr:['M.B.Ch.B.','H.D.V.D. (Dermatology)'],
+ {id:'rauf',c:'derm',img:2,ph:['07503756503'],cr:['M.B.Ch.B.','H.D.V.D. (Dermatology)'],
   n:{ar:'د. رؤوف خشمان',en:'Dr. Rauf Xshman'},
   r:{ar:'أخصائي الأمراض الجلدية والتناسلية',ku:'پسپۆرێ نەخۆشیێن پێستی',en:'Dermatologist'},
   f:{ar:'دبلوم عالي اختصاص العلاج بالليزر · عضو جمعية أطباء الجلدية كوردستان (أربيل) والجمعية العراقية (بغداد)',ku:'دیپلۆما بلند د چارەسەریا لێزەری دا · ئەندامێ کۆمەلەیا نۆژدارێن پێستی یا کوردستانێ و عیراقێ',en:'Higher diploma in laser therapy · Member of the Kurdistan (Erbil) and Iraqi (Baghdad) dermatology societies'}},
- {id:'tariq',c:'derm',img:1,ph:['07500337299'],cr:['Derma','Beauty','Laser'],
+ {id:'tariq',c:'derm',img:2,ph:['07500337299'],cr:['Derma','Beauty','Laser'],
   n:{ar:'د. طارق أيوب',en:'Dr. Tariq Ayoub'},
   r:{ar:'طبيب الأمراض الجلدية والتجميل والليزر',ku:'نۆژدارێ نەخۆشیێن پێستی و جوانکاریێ ب لێزەرێ',en:'Dermatologist · Cosmetic and laser'},
   f:{ar:'الأمراض الجلدية، التجميل، العلاج بالليزر',ku:'نەخۆشیێن پێستی، جوانکاری، چارەسەریا لێزەری',en:'Skin conditions, cosmetic dermatology, laser treatment'}},
- {id:'sabah',c:'radio',img:2,ph:['07512045561'],cr:['Radiology','Ultrasound','Cairo'],
+ {id:'sabah',c:'radio',img:3,ph:['07512045561'],cr:['Radiology','Ultrasound','Cairo'],
   n:{ar:'د. صباح محمد سعيد',en:'Dr. Sabah Mohammed Saeed'},
   r:{ar:'أخصائي الأشعة التشخيصية والسونار (القاهرة)',ku:'پسپۆرێ تیشک و سۆنارێ (قاهیرە)',en:'Radiology and Ultrasound Specialist (Cairo)'},
   f:{ar:'المفراس والرنين، سونار البطن والحوض والغدة الدرقية، سونار العضلات والمفاصل والخلع الولادي، سونار الدماغ للأطفال والتشوهات الولادية، سونار رباعي الأبعاد للجنين، الدوبلر الملون للأوعية الدموية ودوبلر الحوامل · العيادة: زاخو – مركز السوق – مجمع نوروز',ku:'سی تی و ئێم ئاڕ ئای، سۆنارا زک و حەوز و تیرۆئیدێ، سۆنارا ماسولکە و گەهان، سۆنارا مێشکێ زاروکان و کێماسیێن زکماکی، سۆنارا 4D بۆ کۆرپەلەی، دۆپلەرا ڕەنگین بۆ خوینبەران و ژنێن دووگیان · کلینیک: زاخۆ – سەنتەرێ بازاری – کۆمەلگەها نەورۆز',en:'CT and MRI; abdominal, pelvic and thyroid ultrasound; muscle, joint and hip-dysplasia ultrasound; infant brain and congenital anomaly scans; 4D fetal ultrasound; color Doppler for vessels and pregnancy · Clinic: Zakho, bazaar centre, Newroz complex'}},
@@ -71,23 +71,23 @@ let D=[
   n:{ar:'د. ميسون طارق عبدالمحسن',en:'Dr. Mayson Tariq Abdulmuhsin'},
   r:{ar:'أخصائية الأشعة التشخيصية والسونار',ku:'تایبەتمەندا تیشک و سۆنارێ',en:'Specialist in Radiology and Ultrasonography'},
   f:{ar:'سونار، مفراس، رنين مغناطيسي، دوبلر (سونار ملون)، سونار رباعي الأبعاد 4D · دكتوراه (البورد العربي)',ku:'سۆنار، سی تی، ئێم ئاڕ ئای، دۆپلەرا ڕەنگین، سۆنارا 4D · دکتۆرا (بۆردا عەرەبی)',en:'Ultrasound, CT, MRI, color Doppler, 4D ultrasound · Doctorate (Arab Board)'}},
- {id:'bashar',c:'lab',img:1,ph:['07508593551'],cr:['MBChB','FICMS (Path)'],
+ {id:'bashar',c:'lab',img:2,ph:['07508593551'],cr:['MBChB','FICMS (Path)'],
   n:{ar:'أ.د. بشار عبدالجبار الحساوي',en:'Prof. Bashar Abduljabbar'},
   r:{ar:'بروفيسور · اختصاص علم الأمراض والنسيج المرضي',ku:'پڕۆفیسۆر · تایبەتمەندێ زانینێت نەخۆشیا',en:'Professor of Histopathology'},
   f:{ar:'التشخيص النسيجي والمرضي في مختبر نوروز · انستغرام: newroz_lab',ku:'دەستنیشانکرنا شانەیی ل تاقیگەها نەورۆز · ئینستاگرام: newroz_lab',en:'Tissue and pathology diagnosis at Newroz Lab · Instagram: newroz_lab'}},
- {id:'ali',c:'lab',img:1,ph:['07508593551'],cr:['Professor','Medical Microbiology'],
+ {id:'ali',c:'lab',img:2,ph:['07508593551'],cr:['Professor','Medical Microbiology'],
   n:{ar:'أ.د. علي يحيى سعيد',en:'Prof. Dr. Ali Yahya Saeed'},
   r:{ar:'بروفيسور في الأحياء المجهرية الطبية',ku:'پڕۆفیسۆر · تایبەتمەند د بوارێ مایکرۆبایۆلۆجیا پزیشکی دا',en:'Professor of Medical Microbiology'},
   f:{ar:'التحاليل الميكروبية والمختبرية في مختبر نوروز · انستغرام: newroz_lab',ku:'پشکنینێن مایکرۆبی و تاقیگەهێ ل تاقیگەها نەورۆز · ئینستاگرام: newroz_lab',en:'Microbiology and laboratory testing at Newroz Lab · Instagram: newroz_lab'}},
- {id:'mohammed',c:'uro',img:1,ph:['07507775046'],cr:['M.B.Ch.B.','K.B.M.S.'],
+ {id:'mohammed',c:'uro',img:2,ph:['07507775046'],cr:['M.B.Ch.B.','K.B.M.S.'],
   n:{"ar": "د. محمد أحمد نعمت", "en": "Dr. Mohammed Ahmed Nemat"},
   r:{"ar": "أخصائي جراحة الكلى والمسالك البولية", "ku": "بسپور د بوارێ نشتەرگەریا گولچیسکا و جوبارێت دەست ئاڤێ", "en": "Urologist"},
   f:{"ar": "جراحة الكلى والمسالك البولية والعقم وغدة البروستات · إزالة حصى الكلى والمجاري البولية · جراحة الأمراض الخلقية للجهاز التناسلي والأورام", "ku": "بسپور د بوارێ نشتەرگەریا گولچیسکا و جوبارێت دەست ئاڤێ و نەزوکی و ڕژێنا پروستاتا، راکرنا بەرکێن گولچیسکا و جوبارێت میزێ و نشتەرگەریێن نەخوشیێن زکماکی یێن کوئەندامێ زاوزێ، شێرپەنجا", "en": "Kidney and urinary tract surgery, male infertility and prostate · Removal of kidney and urinary tract stones · Surgery for congenital conditions of the genital organs and cancers"}},
- {id:'meajer',c:'dental',img:1,ph:['07518818261'],cr:[],
+ {id:'meajer',c:'dental',img:2,ph:['07518818261'],cr:[],
   n:{"ar":"د. ميجر يحيى شيخو","en":"Dr. Meajer Yehya Sheaxo"},
   r:{"ar":"طبيب أسنان وأخصائي جراحة الفم والوجه والفكين","ku":"نۆژدارێ ددانان و پسپۆرێ نەشتەرگەریا دەڤ، ڕوو و ئەرزینکان","en":"Dentist and Oral & Maxillofacial Surgery Specialist"},
   f:{"ar":"طب الأسنان وجراحة الفم والوجه والفكين","ku":"ددان و نەشتەرگەریا دەڤ، ڕوو و ئەرزینکان","en":"Dentistry and oral & maxillofacial surgery"}},
- {id:'muneer',c:'eye',img:1,ph:['07508492287'],cr:['M.B.Ch.B.','F.K.H.C.M.S. (Ophth.)'],
+ {id:'muneer',c:'eye',img:2,ph:['07508492287'],cr:['M.B.Ch.B.','F.K.H.C.M.S. (Ophth.)'],
   n:{"ar":"د. محمد منير لبيب","en":"Dr. Mohammed Muneer Labib"},
   r:{"ar":"أخصائي جراحة العيون · بورد (دكتوراه)","ku":"نۆژدارێ تایبەتمەندی بورد (دکتۆراه) نەشتەرگەریا چاڤا","en":"Ophthalmic Surgeon · Board certified (Doctorate)"},
   f:{"ar":"أمراض وجراحة العيون","ku":"نەخۆشی و نەشتەرگەریا چاڤا","en":"Eye diseases and eye surgery"}}
@@ -95,7 +95,7 @@ let D=[
 
 const T={
  ar:{dir:'rtl',hname:'مستشفى نوروز الأهلي',er:'طوارئ ٢٤ ساعة',erCard:'الطوارئ · مفتوحة ٢٤ ساعة',callHosp:'خابر المستشفى',eyebrow:'مستشفى ومجمع نوروز الأهلي · زاخو',
-  h1:'أحسن الأطباء الاختصاص، <em>كلهم بمكان واحد</em>',lead:'أساتذة واستشاريين بالنسائية والقلب والجراحة والباطنية وغيرها، ويانا أقسام كاملة وطوارئ شغّالة ليل ونهار بقلب زاخو.',ctaDocs:'شوف أطباءنا',
+  h1:'أحسن الأطباء الاختصاص، <em>كلهم بمكان واحد</em>',lead:'{n} طبيب اختصاص بالنسائية والقلب والجراحة والعيون والأسنان والمسالك وغيرها، وطوارئ شغّالة ٢٤ ساعة بقلب زاخو. خابر الدكتور مباشرة أو راسله واتساب.',waHero:'راسلنا واتساب',ctaDocs:'شوف أطباءنا',
   tagName:'د. فاطمة كمال خالد',tagRole:'أستاذ مساعد واستشارية النسائية والتوليد',
   fSpec:'الاختصاص',fName:'اسم الدكتور',fNamePh:'مثلاً: فاطمة',fGo:'دوّر على دكتور',
   openNow:'هسه مفتوح',zakho:'بتوقيت زاخو',navDocs:'الأطباء',navComplain:'الشكاوي',navTips:'نصايح صحية',navDepts:'الأقسام',navContact:'تواصل ويانا',
@@ -107,7 +107,7 @@ const T={
   d:{surgery:['قسم العمليات','صالات عمليات مجهزة للعمليات العامة والاختصاص.'],icu:['قسم الإنعاش','عناية مركزة ومراقبة طول الوقت للحالات الصعبة.'],cath:['قسم القسطرة القلبية','تشخيص وعلاج أمراض القلب والشرايين.'],vip:['غرف VIP','غرف خاصة ومريحة للمريض والمرافق.'],birth:['قسم الولادة الطبيعية','متابعة الأم والولادة الطبيعية بمكان آمن.'],physio:['قسم العلاج الطبيعي','جلسات تأهيل حتى ترجع الحركة.'],scope:['ناظور القولون والمعدة','فحص بالناظور للمعدة والقولون.'],nicu:['الخدج وحديثي الولادة','رعاية خاصة للأطفال الخدج والمواليد الجدد.']},
   contactKicker:'تعالوا زورونا',cTitle:'المشاكل والشكاوي',cText:'صارت عندك مشكلة، أو عندك شكوى أو اقتراح؟ تواصل ويا إدارة المستشفى مباشرة على هالرقم، وكل ملاحظة تهمنا.',waMsg:'هلو، أريد أقدم شكوى / ملاحظة لمستشفى نوروز:',contactTitle:'تواصل ويانا',phoneL:'تلفون المستشفى',call:'خابر',copy:'انسخ',copied:'تم نسخ الرقم',addrL:'العنوان',addr:'دهوك – زاخو – مقابل مديرية ماء زاخو',map:'افتح بالخريطة',followL:'تابعونا',follow:'آخر الأخبار والعروض على صفحاتنا.',footAddr:'زاخو، مقابل مديرية ماء زاخو'},
  ku:{dir:'rtl',hname:'نەخۆشخانا نەورۆز',er:'فریاکەفتن ٢٤ دەمژمێر',erCard:'فریاکەفتن · ٢٤ دەمژمێر ڤەکرییە',callHosp:'پەیوەندیێ ب نەخۆشخانێ بکە',eyebrow:'نەخۆشخانە و کۆمەلگەها نەورۆز · زاخۆ',
-  h1:'باشترین نۆژدارێن پسپۆر، <em>ل بن ئێک بانی</em>',lead:'پڕۆفیسۆر و ڕاوێژکار د ژنان، دل، نەشتەرگەری، نەخۆشیێن ناڤخۆیی و پتر دا، دگەل پشکێن تەمام و فریاکەفتنا شەڤ و ڕۆژ ل دلێ زاخۆ.',ctaDocs:'نۆژدارێن مە بناسە',
+  h1:'باشترین نۆژدارێن پسپۆر، <em>ل بن ئێک بانی</em>',lead:'{n} نۆژدارێن پسپۆر د ژنان، دل، نەشتەرگەری، چاڤ، ددان و پتر دا، دگەل فریاکەفتنا ٢٤ دەمژمێران ل زاخۆ. ڕاستەوخۆ پەیوەندیێ ب نۆژداری بکە یان ل واتسئەپێ نامە بهنێرە.',waHero:'نامە ل واتسئەپێ',ctaDocs:'نۆژدارێن مە بناسە',
   tagName:'د. فاطمە کمال خالد',tagRole:'پڕۆفیسۆرا هاریکار و نۆژدارا ڕاوێژکار',
   fSpec:'پسپۆری',fName:'ناڤێ نۆژداری',fNamePh:'نموونە: فاطمە',fGo:'ل نۆژداری بگەڕە',
   openNow:'نوکە ڤەکرییە',zakho:'دەمێ زاخۆ',navDocs:'نۆژدار',navComplain:'گازندە',navTips:'ئامۆژگاری',navDepts:'پشک',navContact:'پەیوەندی',
@@ -119,7 +119,7 @@ const T={
   d:{surgery:['پشکا نەشتەرگەریێ','هۆلێن نەشتەرگەریێ یێن ئامادەکری.'],icu:['پشکا ئینعاشێ','چاڤدێریا چڕ بۆ نەخۆشێن ڕەوشا وان گران.'],cath:['پشکا قەستەرا دلی','دەستنیشانکرن و چارەسەریا نەخۆشیێن دلی.'],vip:['ژوورێن VIP','ژوورێن تایبەت بۆ نەخۆش و هەڤالێن وان.'],birth:['زایینا سروشتی','زایینا سروشتی د ژینگەهەکا پارێزراو دا.'],physio:['چارەسەریا سروشتی','دانیشتنێن ڤەگەڕاندنا لڤینێ.'],scope:['ناظورا گەدە و کۆلۆنێ','پشکنینا ناظوری بۆ گەدە و کۆلۆنێ.'],nicu:['زارۆکێن زوو بوویی و تازە بوویی','چاڤدێریا تایبەت بۆ زارۆکێن تازە.']},
   contactKicker:'سەرەدانا مە بکەن',cTitle:'کێشە و گازندە',cText:'کێشەیەک تە هەبوو یان گازندە یان پێشنیارەک؟ ڕاستەوخۆ ب ڕێڤەبەریا نەخۆشخانێ ڤە ل سەر ڤێ ژمارێ پەیوەندیێ بکە، ئەم گرنگیێ ب هەر تێبینیەکێ ددەین.',waMsg:'سلاڤ، دخوازم گازندەیەکێ / تێبینیەکێ پێشکێشی نەخۆشخانا نەورۆز بکەم:',contactTitle:'پەیوەندیێ ب مە بکەن',phoneL:'تەلەفۆنا نەخۆشخانێ',call:'پەیوەندی',copy:'کۆپی',copied:'ژمار هاتە کۆپیکرن',addrL:'ناڤ و نیشان',addr:'دهۆک – زاخۆ – بەرامبەر بنگەهێ ئاڤا زاخۆ',map:'ل سەر نەخشەی ڤەکە',followL:'مە فۆلۆ بکەن',follow:'نووترین هەواڵ ل سەر پەڕێن مە.',footAddr:'زاخۆ، بەرامبەر بنگەهێ ئاڤا زاخۆ'},
  en:{dir:'ltr',hname:'Nawroz Hospital',er:'24h Emergency',erCard:'Emergency · open 24 hours',callHosp:'Call the hospital',eyebrow:'Newroz Hospital & Complex · Zakho',
-  h1:'Distinguished specialists, <em>under one roof</em>',lead:'Professors and consultants in women’s health, cardiology, surgery, internal medicine and more, with complete departments and round-the-clock emergency care in Zakho.',ctaDocs:'Meet our doctors',
+  h1:'Distinguished specialists, <em>under one roof</em>',lead:'{n} specialists in women’s health, cardiology, surgery, eye care, dentistry and more, with 24-hour emergency care in Zakho. Call a doctor directly or message us on WhatsApp.',waHero:'WhatsApp us',ctaDocs:'Meet our doctors',
   tagName:'Dr. Fatima Kamal Khalid',tagRole:'Assistant Professor & Consultant, Obstetrics and Gynecology',
   fSpec:'Specialty',fName:'Doctor’s name',fNamePh:'e.g. Fatima',fGo:'Find a doctor',
   openNow:'Open now',zakho:'Zakho time',navDocs:'Doctors',navComplain:'Complaints',navTips:'Health tips',navDepts:'Departments',navContact:'Contact',
@@ -193,6 +193,7 @@ function apply(l){
   r.lang=l;r.dir=t.dir;
   document.querySelectorAll('[data-t]').forEach(el=>{if(t[el.dataset.t]!=null)el.textContent=t[el.dataset.t]});
   document.querySelectorAll('[data-h]').forEach(el=>el.innerHTML=t[el.dataset.h]);
+  setLead();
   $('q').placeholder=t.search;$('fname').placeholder=t.fNamePh;
   $('dgrid').innerHTML=DEPTS.map(k=>`<article class="dept"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${DICONS[k]}</svg></div><h3>${t.d[k][0]}</h3><p>${t.d[k][1]}</p></article>`).join('');
   document.querySelectorAll('.langs button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.l===l));
@@ -200,6 +201,8 @@ function apply(l){
   try{localStorage.setItem('newroz-lang',l)}catch(e){}
 }
 $('docCount').textContent=D.length;
+function setLead(){const el=document.querySelector('.lead[data-t=lead]');if(!el)return;const n=String(D.length),loc=lang==='en'?n:n.replace(/\d/g,x=>'٠١٢٣٤٥٦٧٨٩'[x]);el.textContent=T[lang].lead.replace('{n}',loc)}
+setLead();
 document.querySelectorAll('.langs button').forEach(b=>b.addEventListener('click',()=>apply(b.dataset.l)));
 $('chips').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;cat=b.dataset.c;renderChips();renderDocs()});
 $('q').addEventListener('input',e=>{q=e.target.value;renderDocs()});
@@ -342,7 +345,7 @@ function useData(list){
   ALL=list.slice().sort((a,b)=>a.order-b.order);
   D=ALL.filter(d=>!d.hidden&&(d.ph.length||true));
   if(!D.length)D=[];
-  $('docCount').textContent=D.length;
+  $('docCount').textContent=D.length;setLead();
   refreshLU();renderDocs();luSet();
   if($('adm').open&&admView==='list')admRender();
 }
