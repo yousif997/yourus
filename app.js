@@ -4,6 +4,22 @@ const SVG={
  star:'<path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>'
 };
 const ic=(k,fill)=>`<svg viewBox="0 0 24 24" fill="${fill?'currentColor':'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${SVG[k]}</svg>`;
+const CICONS={
+ women:'<circle cx="12" cy="9" r="5"/><path d="M12 14v7M9 18h6"/>',
+ heart:'<path d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 0 0-7.1 7.1L12 21.5l8.8-8.8a5 5 0 0 0 0-7.1z"/><path d="M3.5 12h4l1.5-3 3 6 1.5-3h7"/>',
+ internal:'<path d="M5 3v6a4 4 0 0 0 8 0V3M9 13v3a5 5 0 0 0 10 0v-2"/><circle cx="19" cy="12" r="2"/>',
+ rheum:'<path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z"/>',
+ neuro:'<path d="M12 5.5A2.5 2.5 0 0 0 9.5 3 3.5 3.5 0 0 0 6 6.5 3.5 3.5 0 0 0 4 12a3.5 3.5 0 0 0 2 5.5 3 3 0 0 0 6 .5zM12 5.5A2.5 2.5 0 0 1 14.5 3 3.5 3.5 0 0 1 18 6.5a3.5 3.5 0 0 1 2 5.5 3.5 3.5 0 0 1-2 5.5 3 3 0 0 1-6 .5"/><path d="M8.5 10.5c1 0 1.5.5 1.5 1.5M15.5 13.5c-1 0-1.5-.5-1.5-1.5"/>',
+ surgery:'<circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/>',
+ uro:'<path d="M12 2.7s6 6.3 6 10.8a6 6 0 0 1-12 0c0-4.5 6-10.8 6-10.8z"/><path d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5"/>',
+ dental:'<path d="M7 3C4.5 3 3 5 3 7.5c0 2 .8 3.5 1.3 5.5.6 2.5 1 7 2.7 8 1.5 1 2-4 3-5.5.5-.8 1.5-.8 2 0 1 1.5 1.5 6.5 3 5.5 1.7-1 2.1-5.5 2.7-8 .5-2 1.3-3.5 1.3-5.5C21 5 19.5 3 17 3c-2 0-3 1.2-5 1.2S9 3 7 3z"/>',
+ eye:'<path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+ peds:'<circle cx="12" cy="12" r="9"/><path d="M9 10h.01M15 10h.01M9 14.5c.8 1 1.8 1.5 3 1.5s2.2-.5 3-1.5M12 3c-1 1.5 0 3 1.5 2.5"/>',
+ derm:'<path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3zM19 16v4M17 18h4M5 4v3M3.5 5.5h3"/>',
+ radio:'<path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M12 7v10M8.5 10c1.2.6 2.3.6 3.5 0 1.2.6 2.3.6 3.5 0M8.5 13.5c1.2.6 2.3.6 3.5 0 1.2.6 2.3.6 3.5 0"/>',
+ lab:'<path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3M7.5 15h9"/>'
+};
+const cic=c=>CICONS[c]?`<span class="spec" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${CICONS[c]}</svg></span>`:'';
 const DICONS={
  surgery:'<path d="M14.5 3.5l6 6L9 21H3v-6z"/><path d="M12 6l6 6"/>',
  icu:'<path d="M3 12h4l2-5 4 10 2-5h6"/>',
@@ -165,7 +181,7 @@ function renderDocs(){
   const showFeat=false;
   $('feature').hidden=!showFeat;
   $('docs').innerHTML=list.length?list.map(d=>{const p=d.ph[0];return `<article class="doc">
-    <button class="ph" type="button" data-open="${d.id}" aria-label="${esc(t.profile+': '+nm(d))}">${photo(d)}<span class="tag">${t.cats[d.c]}</span></button>
+    <button class="ph" type="button" data-open="${d.id}" aria-label="${esc(t.profile+': '+nm(d))}">${photo(d)}<span class="tag">${t.cats[d.c]}</span>${cic(d.c)}</button>
     <div class="body"><h3>${esc(nm(d))}</h3><p class="role">${esc(tr(d.r))}</p>${creds(d)}
      <button class="more" type="button" data-open="${d.id}">${t.profile}</button>
      <div class="foot"><div><small>${lbl(d,0,t)}</small><a class="num" href="tel:${intl(p)}">${fmt(p)}</a></div>
