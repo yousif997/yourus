@@ -63,7 +63,7 @@ let D=[
   n:{ar:'د. طارق أيوب',en:'Dr. Tariq Ayoub'},
   r:{ar:'طبيب الأمراض الجلدية والتجميل والليزر',ku:'نۆژدارێ نەخۆشیێن پێستی و جوانکاریێ ب لێزەرێ',en:'Dermatologist · Cosmetic and laser'},
   f:{ar:'الأمراض الجلدية، التجميل، العلاج بالليزر',ku:'نەخۆشیێن پێستی، جوانکاری، چارەسەریا لێزەری',en:'Skin conditions, cosmetic dermatology, laser treatment'}},
- {id:'sabah',c:'radio',img:1,ph:['07512045561'],cr:['Radiology','Ultrasound','Cairo'],
+ {id:'sabah',c:'radio',img:2,ph:['07512045561'],cr:['Radiology','Ultrasound','Cairo'],
   n:{ar:'د. صباح محمد سعيد',en:'Dr. Sabah Mohammed Saeed'},
   r:{ar:'أخصائي الأشعة التشخيصية والسونار (القاهرة)',ku:'پسپۆرێ تیشک و سۆنارێ (قاهیرە)',en:'Radiology and Ultrasound Specialist (Cairo)'},
   f:{ar:'المفراس والرنين، سونار البطن والحوض والغدة الدرقية، سونار العضلات والمفاصل والخلع الولادي، سونار الدماغ للأطفال والتشوهات الولادية، سونار رباعي الأبعاد للجنين، الدوبلر الملون للأوعية الدموية ودوبلر الحوامل · العيادة: زاخو – مركز السوق – مجمع نوروز',ku:'سی تی و ئێم ئاڕ ئای، سۆنارا زک و حەوز و تیرۆئیدێ، سۆنارا ماسولکە و گەهان، سۆنارا مێشکێ زاروکان و کێماسیێن زکماکی، سۆنارا 4D بۆ کۆرپەلەی، دۆپلەرا ڕەنگین بۆ خوینبەران و ژنێن دووگیان · کلینیک: زاخۆ – سەنتەرێ بازاری – کۆمەلگەها نەورۆز',en:'CT and MRI; abdominal, pelvic and thyroid ultrasound; muscle, joint and hip-dysplasia ultrasound; infant brain and congenital anomaly scans; 4D fetal ultrasound; color Doppler for vessels and pregnancy · Clinic: Zakho, bazaar centre, Newroz complex'}},
@@ -142,7 +142,7 @@ let lang='ar',cat='all',q='';
 try{const s=localStorage.getItem('newroz-lang');if(T[s])lang=s}catch(e){}
 const nm=d=>lang==='en'?(d.n.en||d.n.ar):(d.n.ar||d.n.en);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const pURL=d=>d.photo?(String(d.photo).startsWith('asset:')?'/_blob/'+String(d.photo).slice(6).replace(/[^a-zA-Z0-9]/g,''):String(d.photo)):(d.img?'img/'+d.id+'.webp':'');
+const pURL=d=>d.photo?(String(d.photo).startsWith('asset:')?'/_blob/'+String(d.photo).slice(6).replace(/[^a-zA-Z0-9]/g,''):String(d.photo)):(d.img?'img/'+d.id+'.webp'+(d.img>1?'?v='+d.img:''):'');
 const initials=d=>(d.ini||String(d.n.en||'').replace(/^(Prof\.?\s*)?(Dr\.?\s*)?/i,'').split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase()||'Dr');
 const photo=d=>{const u=pURL(d);return u?`<img class="${d.cut===false?'cover':''}" src="${esc(u)}" alt="${esc(d.n.en)}" loading="lazy">`:`<div class="mono"><span>${esc(initials(d))}</span></div>`};
 const tr=(o)=>o?(o[lang]||o.ar||o.en||''):'';
@@ -151,7 +151,7 @@ const lbl=(d,i,t)=>d.c==='lab'?t.lab:d.ph.length>1?(i?t.secretary:t.doctor):t.cl
 
 function renderFeature(){
   const t=T[lang],d=D[0];if(!d||!d.ph[0])return;const p=d.ph[0];
-  $('feature').innerHTML=`<div class="ph"><img src="img/${d.id}.webp" alt="${d.n.en}"></div><div class="body">
+  $('feature').innerHTML=`<div class="ph"><img src="img/${d.id}.webp${d.img>1?'?v='+d.img:''}" alt="${d.n.en}"></div><div class="body">
    <span class="badge">${ic('star',1)}${t.feat}</span>
    <h3>${esc(nm(d))}</h3><p class="role">${esc(tr(d.r))}</p><p class="focus">${esc(tr(d.f))}</p>${creds(d)}
    <div class="actions"><span class="phone">${fmt(p)}</span>
@@ -412,7 +412,7 @@ async function delDoc(id){
 }
 async function importBuiltin(){
   if(admBusy)return;admBusy=true;
-  try{for(const d of BUILTIN){await DB.collection('doctors').doc(d.id).set(toDoc({...clean(d,0),order:d.order,photo:d.img?'img/'+d.id+'.webp':''}))}}catch(e){show(aT().err)}
+  try{for(const d of BUILTIN){await DB.collection('doctors').doc(d.id).set(toDoc({...clean(d,0),order:d.order,photo:d.img?'img/'+d.id+'.webp'+(d.img>1?'?v='+d.img:''):''}))}}catch(e){show(aT().err)}
   admBusy=false;
 }
 $('admBody').addEventListener('click',e=>{
