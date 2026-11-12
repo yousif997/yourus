@@ -67,7 +67,7 @@ let D=[
   n:{ar:'د. طارق أيوب',en:'Dr. Tariq Ayoub'},
   r:{ar:'طبيب الأمراض الجلدية والتجميل والليزر',ku:'نۆژدارێ نەخۆشیێن پێستی و جوانکاریێ ب لێزەرێ',en:'Dermatologist · Cosmetic and laser'},
   f:{ar:'الأمراض الجلدية، التجميل، العلاج بالليزر',ku:'نەخۆشیێن پێستی، جوانکاری، چارەسەریا لێزەری',en:'Skin conditions, cosmetic dermatology, laser treatment'}},
- {id:'sabah',c:'radio',img:4,ph:['07512045561'],cr:['Radiology','Ultrasound','Cairo'],
+ {id:'sabah',c:'radio',img:4,ph:['07501234567'],cr:['Radiology','Ultrasound','Cairo'],
   n:{ar:'د. صباح محمد سعيد',en:'Dr. Sabah Mohammed Saeed'},
   r:{ar:'أخصائي الأشعة التشخيصية والسونار (القاهرة)',ku:'پسپۆرێ تیشک و سۆنارێ (قاهیرە)',en:'Radiology and Ultrasound Specialist (Cairo)'},
   f:{ar:'المفراس والرنين، سونار البطن والحوض والغدة الدرقية، سونار العضلات والمفاصل والخلع الولادي، سونار الدماغ للأطفال والتشوهات الولادية، سونار رباعي الأبعاد للجنين، الدوبلر الملون للأوعية الدموية ودوبلر الحوامل · العيادة: زاخو – مركز السوق – مجمع نوروز',ku:'سی تی و ئێم ئاڕ ئای، سۆنارا زک و حەوز و تیرۆئیدێ، سۆنارا ماسولکە و گەهان، سۆنارا مێشکێ زاروکان و کێماسیێن زکماکی، سۆنارا 4D بۆ کۆرپەلەی، دۆپلەرا ڕەنگین بۆ خوینبەران و ژنێن دووگیان · کلینیک: زاخۆ – سەنتەرێ بازاری – کۆمەلگەها نەورۆز',en:'CT and MRI; abdominal, pelvic and thyroid ultrasound; muscle, joint and hip-dysplasia ultrasound; infant brain and congenital anomaly scans; 4D fetal ultrasound; color Doppler for vessels and pregnancy · Clinic: Zakho, bazaar centre, Newroz complex'}},
